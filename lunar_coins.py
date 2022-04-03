@@ -16,7 +16,6 @@ def main():
         print("[debug] found " + filename + "profile")
         fullname = os.path.join(path, filename)
         tree = ET.parse(fullname)
-
         # Add the desired amount of coins to the existing coin total
         coinsNode = tree.getroot().find("coins")                                             
         coins = int(coinsNode.text)
