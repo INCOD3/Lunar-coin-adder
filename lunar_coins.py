@@ -18,11 +18,11 @@ def main():
         tree = ET.parse(fullname)
 
         # Add the desired amount of coins to the existing coin total
-        nCoins = tree.getroot().find("coins")                                               # Hungarian notation notes: n = node, i = int
-        iCoins = int(nCoins.text)
-        iCoins += int(adder)
+        coinsNode = tree.getroot().find("coins")                                             
+        coins = int(coinsNode.text)
+        coins += int(adder)
         print("[debug] added " + adder + " lunar coins to every profile")
-        nCoins.text = str(iCoins)
+        coinsNode.text = str(coins)
         print("[debug] wrote to the xml files")
         # Write back to the xml
         tree.write(fullname)
