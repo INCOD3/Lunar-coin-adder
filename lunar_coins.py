@@ -1,8 +1,6 @@
 import os
 import xml.etree.ElementTree as ET
 
-
-# Path selection for us WSL users
 def main():
     adder = input("Enter the Lunar coins number you want to add: ")
     if len(adder) != 2:
